@@ -1,14 +1,11 @@
 import argparse
 import os
-import numpy as np
 import wandb
 import matplotlib.pyplot as plt
 import torchvision.utils as vutils
 
 from tqdm.auto import tqdm
 import torchvision.transforms as transforms
-
-from torch.utils.data import DataLoader
 from torchvision import datasets
 
 import torch.nn as nn
@@ -34,7 +31,7 @@ def wandb_config():
         config.epochs = 2
         config.project = "debug"
     else:
-        config.epochs = 50
+        config.epochs = 25
         config.project = "pytorch_generative_models"
     return config
 
